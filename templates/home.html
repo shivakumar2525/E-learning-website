@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Slider -->
+{% include 'base/slider.html' %}
+
+<br>
+<br>
+<hr>
+<h3 > Why Choose Us?  </h3>
+<br/>
+<br/>
+  <div class="row bg-light">
+
+
+    <div class="col-lg-4" >
+      <img class="rounded-circle" src="{% static 'img/python-Symbol.jpg' %}" width="140" ;height="140">
+
+      <p>"Python has been an important part of Google since the beginning, and remains so as the system grows and evolves. Today dozens of Google engineers use Python, and we're looking for more people with skills in this language."</p>
+
+    </div><!-- /.col-lg-3 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle mx-auto" src="{% static 'img/css.png' %}" width="140" height="140">
+
+      <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript</p>
+
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="{% static 'img/index.png' %}" width="140" height="140">
+
+      <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
+
+    </div><!-- /.col-lg-4 -->
+
+  </div><!-- /.row -->
+  <br/>
+  <br/>
+  <br/>
+
+
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+								</div>
+								<div><button style="background-color: brown;" class="newsletter_button">subscribe</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/sign.svg' %}" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Office Landline: +44 5567 32 664 567</li>
+										<li>Mobile: +44 5567 89 3322 332</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}" alt=""></div>
+								<div class="footer_contact_title">location</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>Hitechcity,hyd</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/around.svg' %}" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>youremail@gmail.com</li>
+										<li>Office@elearning.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="background-color: black;" class="col text-center">
+
+
+	</footer>
+</div>
+<!-- Footer -->
+
+{% endblock content %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+{% endblock %}
+
+</script>}
+
+
+{% block domready %}
+
+$('.customer-logos').slick({
+       slidesToShow: 6,
+       slidesToScroll: 1,
+       autoplay: true,
+       autoplaySpeed: 1500,
+       arrows: false,
+       dots: false,
+       pauseOnHover: false,
+       responsive: [{
+           breakpoint: 768,
+           settings: {
+               slidesToShow: 4
+           }
+       }, {
+           breakpoint: 520,
+           settings: {
+               slidesToShow: 3
+           }
+       }]
+   });
+
+{% endblock %}
